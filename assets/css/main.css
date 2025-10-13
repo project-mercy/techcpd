@@ -223,6 +223,9 @@ body.simple-layout #footer { background: var(--pm-muted); }
 body.simple-layout a { color: var(--pm-primary); }
 body.simple-layout a:hover { color: var(--pm-primary-600); }
 
+:root{
+	--nav-height: 48px;
+}
 /* Responsive top navigation (site-nav) */
 .site-nav {
 	position: fixed;
