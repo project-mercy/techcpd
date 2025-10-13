@@ -82,6 +82,147 @@ input, select, textarea {
 		-ms-overflow-style: scrollbar;
 	}
 
+/* Simple layout overrides (non-destructive) */
+body.simple-layout {
+    /* Brand variables (tweak to match projectmercy.org) */
+    --pm-primary: #b91c1c; /* primary brand */
+    --pm-primary-600: #991b1b; /* hover/darker */
+    --pm-accent: #d97706; /* accent */
+    --pm-surface: #ffffff; /* page bg */
+    --pm-muted: #f4f4f5; /* cards/bg subtle */
+    --pm-text: #1f2937; /* default text */
+
+    background: var(--pm-surface);
+    color: var(--pm-text);
+}
+
+body.simple-layout #header {
+	background: transparent;
+	box-shadow: none;
+	text-align: center;
+	padding: 4rem 0 2rem 0;
+}
+
+body.simple-layout #header .logo {
+	display: inline-block;
+	margin-bottom: 0.75rem;
+}
+
+body.simple-layout #header h1 {
+	margin: 0 0 0.5rem 0;
+	font-weight: 600;
+	letter-spacing: 0;
+    color: var(--pm-primary);
+}
+
+body.simple-layout #header p {
+	margin: 0 auto;
+	max-width: 42rem;
+}
+
+/* Hide internal page nav; keep top-nav only */
+body.simple-layout #nav { display: none; }
+
+/* Main sections: clean spacing */
+body.simple-layout #main { padding-top: 0; }
+body.simple-layout #main > section.main,
+body.simple-layout #main > section.main.special {
+	background: transparent;
+	box-shadow: none;
+	border-top: 1px solid rgba(0,0,0,0.06);
+	padding: 2.5rem 0;
+}
+body.simple-layout #main > section.main:first-of-type {
+	border-top: 0;
+}
+
+/* Section headers */
+body.simple-layout header.major h2 {
+	font-weight: 600;
+	letter-spacing: 0;
+    color: var(--pm-primary);
+}
+
+/* Intro spotlight simplified */
+body.simple-layout #intro .spotlight {
+	display: grid;
+	grid-template-columns: 1.2fr 0.8fr;
+	gap: 2rem;
+	align-items: center;
+}
+@media screen and (max-width: 980px) {
+	body.simple-layout #intro .spotlight {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* Features grid (Tracks) */
+body.simple-layout ul.features {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 1.25rem;
+}
+@media screen and (max-width: 980px) {
+	body.simple-layout ul.features {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+@media screen and (max-width: 640px) {
+	body.simple-layout ul.features {
+		grid-template-columns: 1fr;
+	}
+}
+body.simple-layout ul.features li {
+    background: var(--pm-muted);
+    border: 1px solid rgba(0,0,0,0.06);
+	border-radius: 8px;
+	padding: 1rem;
+}
+body.simple-layout ul.features li .icon {
+	font-size: 1.25rem;
+}
+body.simple-layout ul.features li h3 {
+	margin-top: 0.5rem;
+	margin-bottom: 0.25rem;
+	font-weight: 600;
+	letter-spacing: 0;
+    color: var(--pm-primary);
+}
+
+/* Statistics (Career paths) simplified */
+body.simple-layout ul.statistics {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 1rem;
+}
+@media screen and (max-width: 980px) {
+	body.simple-layout ul.statistics { grid-template-columns: 1fr; }
+}
+body.simple-layout ul.statistics li {
+    background: var(--pm-muted);
+	border: 1px solid rgba(0,0,0,0.06);
+	border-radius: 8px;
+	padding: 1rem;
+}
+
+/* Buttons block in sections */
+body.simple-layout .actions.special li a.button {
+    border-radius: 8px;
+    background: var(--pm-primary);
+    color: #fff !important;
+    box-shadow: none;
+}
+body.simple-layout .actions.special li a.button:hover {
+    background: var(--pm-primary-600);
+}
+
+/* Footer simplified spacing */
+body.simple-layout #footer { background: var(--pm-muted); }
+
+/* Links */
+body.simple-layout a { color: var(--pm-primary); }
+body.simple-layout a:hover { color: var(--pm-primary-600); }
+
 	@media screen and (max-width: 480px) {
 
 		html, body {
