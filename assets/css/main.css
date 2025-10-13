@@ -229,8 +229,10 @@ body.simple-layout a:hover { color: var(--pm-primary-600); }
 	top: 0;
 	left: 0;
 	right: 0;
+	height: var(--nav-height);
+	font-family: Commissionerloud,sans-serif;
 	z-index: 10010;
-	background: rgba(255,255,255,0.9);
+	background: rgba(232,73,20,1);
 	backdrop-filter: saturate(180%) blur(10px);
 	border-bottom: 1px solid rgba(0,0,0,0.06);
 }
@@ -240,7 +242,7 @@ body.simple-layout a:hover { color: var(--pm-primary-600); }
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 0.6rem 1rem;
+	padding: 0.1rem 1rem;
 }
 .site-nav .brand {
 	display: inline-flex;
@@ -248,17 +250,17 @@ body.simple-layout a:hover { color: var(--pm-primary-600); }
 	align-items: center;
 	text-decoration: none;
 }
-.site-nav .brand-logo { height: 28px; width: auto; }
+.site-nav .brand-logo { height: 30px; width: auto; top: -13px; display: block; position: relative;}
 .site-nav .brand-name { color: var(--pm-text); font-weight: 700; letter-spacing: 0; }
-.site-nav .links { display: flex; gap: 0.75rem; align-items: center; }
-.site-nav .links a { color: var(--pm-text); text-decoration: none; padding: 0.4rem 0.6rem; border-radius: 6px; }
-.site-nav .links a:hover { background: var(--pm-muted); }
+.site-nav .links { display: flex; height: 100%; gap: 0.75rem; align-items: center; margin-top: 2px; }
+.site-nav .links a { line-height: 1; display: flex; color: white !important; text-decoration: none; padding: 0.3rem 0.6rem; border-radius: 6px; align-items: center;}
+.site-nav .links a:hover { color: black !important;}
 .site-nav .links a.active { color: var(--pm-primary); box-shadow: inset 0 0 0 1px var(--pm-primary); }
 
 /* Ensure content clears the fixed nav */
 .site-nav + #wrapper,
 .site-nav + #main {
-	margin-top: 58px;
+	margin-top: var(--nav-height);
 }
 
 	@media screen and (max-width: 480px) {
