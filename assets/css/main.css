@@ -2594,6 +2594,14 @@ body.simple-layout a:hover { color: var(--pm-primary-600); }
 			.image.main img {
 				width: 100%;
 			}
+		.image.half-rect img {
+			border-radius: 0;
+			width: 50%;
+			height: auto;
+			display: block;
+			margin-left: auto;
+			margin-right: 0;
+		}
 
 /* List */
 
