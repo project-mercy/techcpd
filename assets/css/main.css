@@ -120,9 +120,6 @@ body.simple-layout #header p {
 	max-width: 42rem;
 }
 
-/* Hide internal page nav; keep top-nav only */
-body.simple-layout #nav { display: none; }
-
 /* Main sections: clean spacing */
 body.simple-layout #main { padding-top: 0; }
 body.simple-layout #main > section.main,
