@@ -182,15 +182,15 @@ input, select, textarea {
 	}
 
 		p.content {
-			-moz-columns: 20em 2;
-			-webkit-columns: 20em 2;
-			-ms-columns: 20em 2;
-			columns: 20em 2;
-			-moz-column-gap: 2em;
-			-webkit-column-gap: 2em;
-			-ms-column-gap: 2em;
-			column-gap: 2em;
-			text-align: justify;
+			/* Render as a single paragraph block, not multi-column */
+			columns: 1;
+			-moz-columns: 1;
+			-webkit-columns: 1;
+			-moz-column-gap: 0;
+			-webkit-column-gap: 0;
+			column-gap: 0;
+			text-align: center;
+			line-height: 1.6;
 		}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -2405,7 +2405,7 @@ input, select, textarea {
 			}
 
 		.image.main {
-			display: block;
+			display: grid;
 			margin: 0 0 3em 0;
 			width: 100%;
 		}
@@ -3846,21 +3846,6 @@ body.simple-layout header.major h2 {
     color: var(--pm-primary);
 }
 
-/* Intro spotlight simplified */
-body.simple-layout #intro .spotlight,
-body.simple-layout #intro2 .spotlight {
-	/* Use CSS Grid to place content and image side-by-side */
-	display: grid;
-	grid-template-columns: 40% 60%;
-	gap: 2rem;
-	align-items: center;
-}
-@media screen and (max-width: 980px) {
-	body.simple-layout #intro .spotlight {
-		grid-template-columns: 1fr;
-	}
-}
-
 /* Features grid (Tracks) */
 body.simple-layout ul.features {
 	display: grid;
@@ -3981,4 +3966,37 @@ body.simple-layout a:hover { color: var(--pm-primary-600); }
 	padding: 0;
 	object-fit: cover;
 	object-position: right;
+}
+
+
+.banner
+{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: auto;
+	overflow: hidden;
+}
+.banner .spotlight{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	padding-bottom: 3rem;
+	padding-top: 3rem;
+}
+.banner .content
+{
+	flex: 0 0 30%;
+	color: var(--pm-text);
+}
+.banner .content h2{
+	margin-bottom: 2rem;
+	font-size: 2.5rem;
+	font-weight: 600;
+	letter-spacing: 0;
+	color: var(--pm-primary);
 }
