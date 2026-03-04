@@ -3953,7 +3953,7 @@ body.simple-layout a:hover { color: var(--pm-primary-600); }
 .site-nav .brand-logo { height: 36px; width: auto; display: block; margin: 0; }
 .site-nav .links { display: flex; height: var(--nav-height); gap: 1rem; align-items: center; margin-top: 0; list-style: none; padding: 0; margin: 0; }
 /* Plain text links (remove button appearance) */
-.site-nav .links a { display: inline-block; color: #ffffff !important; text-decoration: none; padding: 0 0.35rem; border-radius: 0; background: transparent; height: var(--nav-height); line-height: var(--nav-height); border-bottom: none !important; }
+.site-nav .links a { display: inline-block; color: #ffffff !important; text-decoration: none; padding: 0 0.35rem; border-radius: 0; background: transparent; height: var(--nav-height); line-height: var(--nav-height); transition: color 0.12s ease; border-bottom: none !important; }
 .site-nav .links a:hover { color: rgba(255,255,255,0.9); }
 .site-nav .links a.active { color: #ffffff !important; text-decoration: underline; box-shadow: none; }
 
