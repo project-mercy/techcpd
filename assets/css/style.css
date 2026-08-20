@@ -91,7 +91,7 @@ input, select, textarea {
 	left: 0;
 	right: 0;
 	height: var(--nav-height);
-	font-family: Commissionerloud,sans-serif;
+	font-family: "Commissioner Loud", "Commissioner", Helvetica, sans-serif;
 	z-index: 10010;
 	background: rgba(232,73,20,1);
 	backdrop-filter: saturate(180%) blur(10px);
@@ -192,7 +192,7 @@ input, select, textarea {
 	}
 
 	body, input, select, textarea {
-		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		font-family: "Commissioner Loud", "Commissioner", Helvetica, sans-serif;
 		font-size: 1rem;
 		font-weight: 300;
 		line-height: 1.65;
