@@ -3868,6 +3868,7 @@ body.simple-layout #header p {
 	align-items: center;
 	justify-content: space-between;
 	padding: 0.25rem 0;
+}
 body.simple-layout #main > section.main.special {
 	background: transparent;
 	box-shadow: none;
@@ -4016,4 +4017,306 @@ body.simple-layout a:hover { color: var(--pm-primary-600); }
 	letter-spacing: 0;
 	color: var(--pm-primary);
 }
+
+/* Final visual system for the home page */
+body.simple-layout {
+	--pm-primary: #e84914;
+	--pm-primary-600: #bd3510;
+	--pm-accent: #176b68;
+	--pm-surface: #f7f6f2;
+	--pm-muted: #eeece6;
+	--pm-text: #202321;
+	--pm-line: rgba(32, 35, 33, 0.14);
+	background: var(--pm-surface);
+	background-image: radial-gradient(circle at 88% 8%, rgba(232, 73, 20, 0.08), transparent 22rem);
+	color: var(--pm-text);
+	font-family: "Avenir Next", "Helvetica Neue", sans-serif;
+}
+
+body.simple-layout .site-nav {
+	background: var(--pm-primary);
+	box-shadow: 0 1px 0 rgba(32, 35, 33, 0.12);
+}
+
+body.simple-layout .site-nav .nav-inner {
+	max-width: 72rem;
+	min-height: var(--nav-height);
+	padding: 0 1.25rem;
+}
+
+body.simple-layout .site-nav .links {
+	gap: 1.5rem;
+}
+
+body.simple-layout .site-nav .links a {
+	font-size: 0.78rem;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+body.simple-layout #wrapper {
+	width: 72rem;
+	max-width: calc(100% - 3rem);
+}
+
+body.simple-layout #header {
+	padding: 5.5rem 0 3.25rem;
+}
+
+body.simple-layout #header .logo img {
+	max-width: 10rem;
+}
+
+body.simple-layout #header h1 {
+	color: var(--pm-text);
+	font-size: clamp(2.4rem, 5vw, 4.5rem);
+	font-weight: 700;
+	line-height: 1.05;
+	margin: 0 auto 1rem;
+	max-width: 12ch;
+}
+
+body.simple-layout #header p {
+	color: #626761;
+	font-size: 1rem;
+	line-height: 1.6;
+	max-width: 34rem;
+}
+
+body.simple-layout #nav {
+	position: relative;
+	width: auto;
+	max-width: none;
+	padding: 0.45rem;
+	background: var(--pm-text);
+	border-radius: 0.5rem 0.5rem 0 0;
+}
+
+body.simple-layout #nav ul {
+	margin: 0;
+}
+
+body.simple-layout #nav a {
+	color: #fff;
+	font-size: 0.78rem;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+body.simple-layout #main {
+	background: #fff;
+	border-radius: 0 0 0.5rem 0.5rem;
+	box-shadow: 0 1.5rem 3rem rgba(32, 35, 33, 0.08);
+	overflow: hidden;
+}
+
+body.simple-layout #main > section,
+body.simple-layout #main > section.main.special {
+	border-top: 1px solid var(--pm-line);
+	padding: 4.5rem 4.75rem;
+}
+
+body.simple-layout #main > section:first-child {
+	border-top: 0;
+}
+
+body.simple-layout #main > section.banner {
+	padding-top: 5.25rem;
+	padding-bottom: 5.25rem;
+}
+
+body.simple-layout #main .spotlight {
+	gap: 4rem;
+	margin: 0 auto;
+	max-width: 64rem;
+}
+
+body.simple-layout #main .spotlight .content {
+	flex: 1 1 52%;
+	max-width: 52%;
+	padding-right: 0;
+}
+
+body.simple-layout #main .spotlight .content header.major {
+	margin-bottom: 1.25rem;
+}
+
+body.simple-layout #main .spotlight .content h2,
+body.simple-layout #main header.major h2 {
+	color: var(--pm-text);
+	font-size: clamp(1.7rem, 3vw, 2.6rem);
+	font-weight: 700;
+	line-height: 1.12;
+	margin-bottom: 0.8rem;
+}
+
+body.simple-layout #main header.major h2:after {
+	background: var(--pm-primary);
+	border-radius: 99px;
+	height: 0.2rem;
+	margin-top: 1rem;
+	width: 2.75rem;
+}
+
+body.simple-layout #main .spotlight .content p,
+body.simple-layout #main > section.special > header p,
+body.simple-layout #main > section.special > .content {
+	color: #626761;
+	font-size: 1rem;
+	line-height: 1.75;
+}
+
+body.simple-layout #main .spotlight .image {
+	flex: 1 1 48%;
+	max-width: 48%;
+	background: var(--pm-muted);
+	border: 0;
+	border-radius: 0.75rem;
+	overflow: hidden;
+}
+
+body.simple-layout #main .spotlight .image img {
+	border-radius: 0;
+	max-height: 17rem;
+	object-fit: cover;
+}
+
+body.simple-layout #main #summer-professional-development .image {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	min-height: 17rem;
+}
+
+body.simple-layout #main #summer-professional-development .image img {
+	height: 8rem;
+	max-height: none;
+	object-fit: contain;
+	width: 8rem;
+}
+
+body.simple-layout ul.statistics {
+	gap: 0.75rem;
+	margin: 2rem auto;
+	max-width: 64rem;
+}
+
+body.simple-layout ul.statistics li {
+	background: var(--pm-muted);
+	border: 1px solid var(--pm-line);
+	border-radius: 0.5rem;
+	color: #626761;
+	min-height: 8.5rem;
+	padding: 1.25rem;
+}
+
+body.simple-layout ul.statistics li:nth-child(2) {
+	background: #e6f0ed;
+}
+
+body.simple-layout ul.statistics li:nth-child(3) {
+	background: #fff0e8;
+}
+
+body.simple-layout ul.statistics li strong {
+	color: var(--pm-text) !important;
+	font-size: 1.15rem;
+	font-weight: 700;
+}
+
+body.simple-layout ul.statistics li .icon:before {
+	color: var(--pm-accent);
+	font-size: 1.75rem;
+}
+
+body.simple-layout #certs {
+	background: var(--pm-text);
+	color: #fff;
+}
+
+body.simple-layout #certs header.major h2,
+body.simple-layout #certs header.major p {
+	color: #fff;
+}
+
+body.simple-layout #certs header.major h2:after {
+	background: var(--pm-primary);
+}
+
+body.simple-layout #certs a {
+	background: var(--pm-primary);
+	border-radius: 0.35rem;
+	color: #fff !important;
+	display: inline-block;
+	font-size: 0.8rem;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	padding: 0.8rem 1.1rem;
+	text-transform: uppercase;
+}
+
+body.simple-layout #certs a:hover {
+	background: var(--pm-primary-600);
+}
+
+body.simple-layout #footer {
+	background: transparent;
+	color: #626761;
+	margin: 0;
+	padding: 3rem 0 1rem;
+	width: 100%;
+}
+
+body.simple-layout #footer h2 {
+	color: var(--pm-text);
+	font-size: 1rem;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+@media screen and (max-width: 736px) {
+	body.simple-layout #wrapper {
+		max-width: calc(100% - 1.5rem);
+	}
+
+	body.simple-layout .site-nav .nav-inner {
+		padding: 0 0.75rem;
+	}
+
+	body.simple-layout .site-nav .links {
+		gap: 0.5rem;
+	}
+
+	body.simple-layout .site-nav .links a {
+		font-size: 0.65rem;
+		letter-spacing: 0.03em;
+		padding: 0 0.25rem;
+	}
+
+	body.simple-layout #header {
+		padding: 4.5rem 0 2.5rem;
+	}
+
+	body.simple-layout #main > section,
+	body.simple-layout #main > section.main.special,
+	body.simple-layout #main > section.banner {
+		padding: 3rem 1.5rem;
+	}
+
+	body.simple-layout #main .spotlight {
+		gap: 1.75rem;
+	}
+
+	body.simple-layout #main .spotlight .content,
+	body.simple-layout #main .spotlight .image {
+		max-width: 100%;
+		width: 100%;
+	}
+
+	body.simple-layout #main .spotlight .image {
+		margin-bottom: 0;
+	}
 }
