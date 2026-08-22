@@ -4079,9 +4079,11 @@ body.simple-layout #header h1 {
 
 body.simple-layout #header p {
 	color: #626761;
-	font-size: 1rem;
+	font-size: 1.25rem;
+	font-weight: 700;
 	line-height: 1.6;
 	max-width: 34rem;
+	text-align: center;
 }
 
 body.simple-layout #nav {
